@@ -1,0 +1,445 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Alex Amies | BirdLab</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+<h2 class="sr-only">About Alex Amies — founder of BirdLab</h2>
+<style>
+:root{
+  --brand-primary:#292C70;
+  --brand-accent:#2F59A8;
+  --brand-light:#E4ECF7;
+  --brand-turquoise:#6EDAD3;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+.w{font-family:'Inter',sans-serif;background:#292C70;color:#E4ECF7;width:100%;overflow:hidden;}
+.hero{position:relative;overflow:hidden;background:#292C70;}
+.hero-bg{position:absolute;inset:0;}
+.hero-wireframe-art{bottom:-12%;filter:invert(1) grayscale(1) contrast(1.22);height:auto;mix-blend-mode:screen;opacity:.28;pointer-events:none;position:absolute;right:-8%;width:min(100vw,1500px);z-index:2;-webkit-mask-image:linear-gradient(90deg,transparent 2%,rgba(0,0,0,.4) 32%,#000 68%);mask-image:linear-gradient(90deg,transparent 2%,rgba(0,0,0,.4) 32%,#000 68%);}
+nav{position:relative;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:20px 36px;border-bottom:0.5px solid rgba(47,89,168,0.12);}
+.logo{display:inline-flex;align-items:center;}
+.logo img{display:block;height:auto;width:196px;}
+.logo span{opacity:0.55;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:12px;color:rgba(228,236,247,0.6);text-decoration:none;letter-spacing:0.07em;}
+.nav-cta{font-size:12px;border:0.5px solid rgba(47,89,168,0.4);color:#2F59A8;padding:8px 20px;border-radius:4px;letter-spacing:0.06em;cursor:pointer;}
+.hero-content{position:relative;z-index:5;padding:58px 36px 68px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.hero-left{text-align:left;}
+.badge{display:inline-flex;align-items:center;gap:8px;border:0.5px solid rgba(47,89,168,0.22);border-radius:4px;padding:6px 14px;margin-bottom:22px;}
+.badge-dot{width:5px;height:5px;border-radius:50%;background:#2F59A8;opacity:0.7;}
+.badge span{font-size:11px;color:rgba(228,236,247,0.55);letter-spacing:0.09em;}
+.eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#2F59A8;opacity:0.75;margin-bottom:18px;}
+.h1{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:300;line-height:1.0;color:#E4ECF7;margin-bottom:4px;}
+.h1 em{font-style:italic;color:var(--brand-turquoise);}
+.h1-sub{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:300;letter-spacing:0.3em;text-transform:uppercase;color:rgba(228,236,247,0.32);margin-bottom:22px;}
+.hero-p{font-size:13px;color:rgba(228,236,247,0.75);max-width:400px;line-height:1.82;font-weight:300;margin-bottom:30px;}
+.btns{display:flex;gap:12px;}
+.btn-p{background:#2F59A8;color:#E4ECF7;padding:11px 26px;border-radius:5px;font-size:12.5px;cursor:pointer;letter-spacing:0.04em;border:none;font-family:'Inter',sans-serif;}
+.btn-g{background:transparent;color:rgba(228,236,247,0.65);padding:11px 26px;border-radius:5px;font-size:12.5px;cursor:pointer;letter-spacing:0.04em;border:0.5px solid rgba(47,89,168,0.22);font-family:'Inter',sans-serif;}
+.hero-right{display:flex;align-items:center;justify-content:center;}
+.dot-wave{width:100%;max-width:300px;opacity:0.8;}
+
+.sect{padding:64px 36px;position:relative;overflow:hidden;}
+.sect-inner{position:relative;z-index:2;}
+.sect-label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#2F59A8;opacity:0.75;margin-bottom:14px;}
+.sect-h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;line-height:1.05;color:#E4ECF7;}
+.sect-h2 em{font-style:italic;color:var(--brand-turquoise);}
+.body-text{font-size:13px;color:#E4ECF7;line-height:1.82;font-weight:300;max-width:400px;margin-top:14px;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(47,89,168,0.07);border:0.5px solid rgba(47,89,168,0.11);border-radius:10px;overflow:hidden;}
+.feat{padding:22px 20px;}
+.feat:nth-child(odd){background:#292C70;}
+.feat:nth-child(even){background:#292C70;}
+.feat-n{font-family:'Cormorant Garamond',serif;font-size:24px;color:rgba(47,89,168,0.17);font-weight:300;margin-bottom:7px;}
+.feat-t{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:#E4ECF7;margin-bottom:5px;letter-spacing:0.03em;}
+.feat-b{font-size:11px;color:#E4ECF7;line-height:1.65;font-weight:300;}
+.divider{height:0.5px;background:rgba(47,89,168,0.09);margin:0 36px;}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);position:relative;}
+.stats::before,.stats::after{content:'';position:absolute;left:0;right:0;height:0.5px;background:rgba(47,89,168,0.11);}
+.stats::before{top:0;}.stats::after{bottom:0;}
+.stat{padding:34px 36px;}
+.stat:not(:last-child){border-right:0.5px solid rgba(47,89,168,0.09);}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:#E4ECF7;letter-spacing:0.04em;}
+.stat-l{font-size:11px;color:rgba(228,236,247,0.52);margin-top:8px;line-height:1.6;font-weight:300;letter-spacing:0.04em;}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative;margin-top:44px;}
+.p-line{position:absolute;top:17px;left:12%;width:76%;height:0.5px;background:rgba(47,89,168,0.13);}
+.step{text-align:center;padding:0 8px;}
+.step-dot{width:34px;height:34px;border-radius:50%;border:0.5px solid rgba(47,89,168,0.3);background:#292C70;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;position:relative;z-index:1;}
+.step-dot span{font-family:'Cormorant Garamond',serif;font-size:13px;color:#2F59A8;font-weight:300;}
+.step-t{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:#E4ECF7;margin-bottom:6px;letter-spacing:0.04em;}
+.step-b{font-size:11px;color:#E4ECF7;line-height:1.65;font-weight:300;}
+.cta-inner{position:relative;z-index:2;text-align:center;padding:72px 36px;}
+.cta-h{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:300;color:#E4ECF7;line-height:1.05;}
+.cta-h em{font-style:italic;color:var(--brand-turquoise);}
+.cta-p{font-size:13px;color:#E4ECF7;margin:14px auto 30px;font-weight:300;max-width:420px;line-height:1.78;}
+.cta-btn{display:inline-block;background:#2F59A8;color:#E4ECF7;padding:12px 34px;border-radius:5px;font-size:13px;letter-spacing:0.06em;cursor:pointer;text-decoration:none;}
+footer{padding:24px 36px;border-top:0.5px solid rgba(47,89,168,0.09);display:flex;justify-content:space-between;align-items:center;}
+.f-logo{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#E4ECF7;}
+.f-links{align-items:center;display:flex;gap:20px;}
+.f-links a{font-size:11px;color:#E4ECF7;text-decoration:none;letter-spacing:0.06em;}
+.f-links .linkedin-link{align-items:center;display:inline-flex;height:22px;justify-content:center;letter-spacing:0;width:24px;}
+.linkedin-link img{display:block;height:20px;width:auto;}
+.f-copy{font-size:11px;color:#E4ECF7;letter-spacing:0.04em;line-height:1.55;max-width:440px;text-align:right;}
+
+/* Editorial design system inspired by the reference site's scale and rhythm */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.hero{min-height:600px;background:linear-gradient(120deg,#292C70 0%,#2F59A8 58%,#292C70 100%);}
+nav{padding:28px 6vw;border-bottom:0;}
+.logo{font-size:20px;}.nav-links{gap:18px}.nav-links a{border:1px solid transparent;border-radius:7px;color:rgba(228,236,247,.78);font-size:11px;letter-spacing:.14em;padding:10px 18px;text-transform:uppercase;}.nav-cta{border-color:transparent;padding:10px 18px;text-decoration:none;}.nav-links a[aria-current="page"]{border-color:rgba(228,236,247,.55);color:var(--brand-light);}
+.hero-content{min-height:500px;padding:64px 6vw 72px;grid-template-columns:minmax(260px,.85fr) minmax(340px,1.1fr) minmax(250px,.75fr);gap:3vw;}.badge{border-color:rgba(228,236,247,.28);}.badge span,.eyebrow{color:var(--brand-light);}
+.h1{font-size:clamp(58px,7vw,92px);line-height:.9;letter-spacing:-.025em;}.h1 em{color:var(--brand-turquoise);opacity:1;}.h1-sub{font-size:12.75px;margin-top:22px;color:rgba(228,236,247,.72);}.hero-p{font-size:14px;max-width:520px;color:#E4ECF7;}
+.btn-p,.cta-btn{background:var(--brand-light);color:var(--brand-primary);border-radius:0;padding:14px 28px;}.btn-g{border-color:rgba(228,236,247,.42);border-radius:0;color:var(--brand-light);padding:14px 28px;}
+.sect{padding:112px 6vw;}.sect-inner{max-width:none;margin:0;}.two-col{grid-template-columns:.75fr 1.25fr;gap:5vw;align-items:start;}.sect-label{color:var(--brand-light);margin-bottom:22px;}.sect-h2{font-size:clamp(42px,5vw,68px);line-height:.95;letter-spacing:-.02em;}.sect-h2 em{color:var(--brand-turquoise);opacity:1;}.body-text{font-size:14px;line-height:1.9;max-width:560px;}
+.light-section{background:#fff!important;color:var(--brand-primary);}
+.light-section svg>rect:first-child{fill:#fff;}
+.light-section svg rect[fill^="url("]{display:none;}
+.light-section .sect-label,.light-section .sect-h2,.light-section .feat-t,.light-section .step-t{color:var(--brand-primary);}
+.light-section .sect-h2 em{color:#147F84;}
+.light-section .body-text,.light-section .feat-b,.light-section .step-b{color:var(--brand-primary);}
+.light-section .feat{border-top-color:rgba(41,44,112,.25);}
+.light-section .feat:nth-child(odd){border-right-color:rgba(41,44,112,.18);}
+.light-section .feat-n{color:rgba(47,89,168,.5);}
+.light-section .process-steps .p-line{background:rgba(41,44,112,.25);}
+.light-section .step-dot{background:#fff;border-color:rgba(41,44,112,.4);}
+.light-section .step-dot span{color:var(--brand-accent);}
+.feat-grid{background:transparent;border:0;border-radius:0;gap:0;}.feat{background:transparent!important;border-top:1px solid rgba(228,236,247,.22);padding:25px 22px 30px 0;}.feat:nth-child(odd){border-right:1px solid rgba(228,236,247,.16);}.feat:nth-child(even){padding-left:28px;}.feat-n{color:rgba(228,236,247,.28);}.feat-t{font-size:21px;}.feat-b{font-size:12px;line-height:1.75;}
+.stats{max-width:100%;}.stat{padding:54px 6vw;}.stat-n{font-size:44px;}.stat-l{color:#E4ECF7;}.process-steps{margin-top:60px;}.step-t{font-size:20px;}.step-b{font-size:12px;line-height:1.7;}.step-dot{border-color:rgba(228,236,247,.42);}
+.about-bird-art{mix-blend-mode:screen;opacity:.28;pointer-events:none;position:absolute;right:5%;top:-8%;width:min(30vw,390px);}
+.about-bird-art+.dot-wave{display:none;}
+.founder-portrait{align-self:start;border:1px solid rgba(255,255,255,.8);border-radius:10px;box-sizing:border-box;display:block;height:auto;justify-self:start;object-fit:cover;object-position:center 34%;overflow:hidden;width:74.75%;}
+.hero-left .h1{font-size:clamp(42px,5vw,68px);line-height:.95;letter-spacing:-.02em;}
+.hero-left .h1-sub{text-transform:none;}
+.hero-profile-link{color:var(--brand-turquoise);display:inline-block;font-size:13px;letter-spacing:.03em;text-decoration-color:rgba(110,218,211,.55);text-underline-offset:4px;}
+.hero-left,.sect-inner.two-col>div:first-child,.podcast-inner>div:first-child,.podcast-chapters{text-align:left;}
+.hero-left{align-self:start;}
+.hero-right{align-items:flex-end;justify-content:flex-end;position:relative;}
+.founder-hero-summary{background:rgba(41,44,112,.34);border-top:0;max-width:430px;padding:26px 28px;position:relative;z-index:3;}
+.founder-hero-summary h2{color:var(--brand-turquoise);font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:300;margin-bottom:10px;}
+.founder-hero-summary p{color:#E4ECF7;font-size:13px;line-height:1.8;}
+.founder-heading{font-size:clamp(42px,5vw,68px);line-height:.95;}
+.founder-copy-secondary{padding-top:54px;}
+.podcast-section{background:#fff;color:var(--brand-primary);padding:110px 6vw;position:relative;overflow:hidden;}
+.podcast-inner{margin:0;max-width:1500px;position:relative;z-index:2;}
+.podcast-intro{display:grid;gap:7vw;grid-template-columns:.72fr 1.28fr;align-items:start;}
+.podcast-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,68px);font-weight:300;letter-spacing:-.02em;line-height:.95;}
+.podcast-title em{color:var(--brand-turquoise);font-style:italic;}
+.podcast-copy{color:var(--brand-primary);font-size:14px;line-height:1.85;margin-top:22px;max-width:480px;}
+.podcast-video{aspect-ratio:16/9;background:#111;border:1px solid rgba(41,44,112,.18);border-radius:8px;box-shadow:0 18px 45px rgba(41,44,112,.12);overflow:hidden;}
+.podcast-video iframe{border:0;display:block;height:100%;width:100%;}
+.podcast-local-fallback{display:none;height:100%;position:relative;width:100%;}
+.podcast-local-fallback img{display:block;height:100%;object-fit:cover;width:100%;}
+.podcast-local-fallback::after{background:rgba(10,10,16,.3);content:'';inset:0;position:absolute;}
+.podcast-local-link{align-items:center;background:#fff;border-radius:7px;color:#292C70;display:flex;font-size:11px;font-weight:500;gap:10px;left:50%;letter-spacing:.08em;padding:14px 20px;position:absolute;text-decoration:none;text-transform:uppercase;top:50%;transform:translate(-50%,-50%);white-space:nowrap;z-index:1;}
+.podcast-local-link::before{border-bottom:7px solid transparent;border-left:11px solid #e62117;border-top:7px solid transparent;content:'';}
+.podcast-video.is-local iframe{display:none;}
+.podcast-video.is-local .podcast-local-fallback{display:block;}
+.podcast-chapters{border-top:1px solid rgba(41,44,112,.2);margin-top:64px;padding-top:30px;}
+.podcast-chapters h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:22px;}
+.chapter-list{display:grid;gap:0 5vw;grid-template-columns:1fr 1fr;list-style:none;}
+.chapter-list li{border-top:1px solid rgba(41,44,112,.14);}
+.chapter-link{align-items:baseline;color:var(--brand-primary);display:grid;gap:14px;grid-template-columns:28px 72px 1fr;padding:13px 0;text-decoration:none;transition:color .2s ease;}
+.chapter-link:hover,.chapter-link:focus-visible{color:#147F84;outline:none;}
+.chapter-number{color:#147F84;font-size:9px;letter-spacing:.14em;}
+.chapter-link time{font-size:10px;letter-spacing:.08em;white-space:nowrap;}
+.chapter-name{font-family:'Inter',sans-serif;font-size:12px;line-height:1.55;}
+.cta-inner{padding:120px 6vw;}.cta-h{font-size:clamp(48px,6vw,76px);line-height:.94;}.cta-p{font-size:14px;max-width:560px;}footer{padding:34px 6vw;}
+@media(max-width:1100px) and (min-width:821px){.hero-content{grid-template-columns:minmax(260px,.9fr) minmax(360px,1.1fr)}.hero-right{grid-column:1/-1}.founder-hero-summary{margin-left:auto;max-width:560px}}
+@media(max-width:820px){.hero{min-height:auto}nav{padding:20px 22px}.nav-links{gap:14px}.nav-links>a:not([aria-current="page"]){display:none}.hero-content{grid-template-columns:1fr;min-height:auto;padding:42px 22px 84px}.founder-portrait{height:auto;max-height:none;min-height:0}.hero-wireframe-art,.about-bird-art{display:none}.hero-right{display:flex}.founder-hero-summary{max-width:none;width:100%}.h1{font-size:56px}.sect{padding:78px 22px}.two-col{grid-template-columns:1fr;gap:52px}.founder-copy-secondary{padding-top:0}.stats{grid-template-columns:1fr}.stat:not(:last-child){border-right:0;border-bottom:1px solid rgba(228,236,247,.14)}.process-steps{grid-template-columns:1fr 1fr;gap:40px 18px}.p-line{display:none}.cta-inner{padding:84px 22px}footer{align-items:flex-start;flex-direction:column;gap:14px;padding:28px 22px}.f-links{order:2}.f-copy{align-self:flex-end}.podcast-section{padding:78px 22px}.podcast-intro{grid-template-columns:1fr;gap:42px}.podcast-chapters{margin-top:48px}.chapter-list{grid-template-columns:1fr}}
+@media(max-width:520px){.feat-grid,.process-steps{grid-template-columns:1fr}.feat:nth-child(odd){border-right:0}.feat:nth-child(even){padding-left:0}.btns{align-items:stretch;flex-direction:column}.h1{font-size:48px}.chapter-link{gap:9px;grid-template-columns:24px 68px 1fr}.chapter-name{font-size:11px}}
+</style>
+
+<div class="w">
+<div class="hero">
+  <div class="hero-bg">
+    <svg viewBox="0 0 900 620" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0;">
+      <defs>
+        <radialGradient id="g1" cx="15%" cy="20%" r="50%"><stop offset="0%" stop-color="#292C70" stop-opacity="0.9"/><stop offset="100%" stop-color="#292C70" stop-opacity="0"/></radialGradient>
+        <radialGradient id="g2" cx="85%" cy="15%" r="55%"><stop offset="0%" stop-color="#292C70" stop-opacity="0.85"/><stop offset="100%" stop-color="#292C70" stop-opacity="0"/></radialGradient>
+        <radialGradient id="g3" cx="70%" cy="85%" r="50%"><stop offset="0%" stop-color="#292C70" stop-opacity="0.7"/><stop offset="100%" stop-color="#292C70" stop-opacity="0"/></radialGradient>
+        <radialGradient id="g4" cx="30%" cy="70%" r="40%"><stop offset="0%" stop-color="#292C70" stop-opacity="0.5"/><stop offset="100%" stop-color="#292C70" stop-opacity="0"/></radialGradient>
+        <linearGradient id="fade-left" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#292C70" stop-opacity="0.92"/><stop offset="45%" stop-color="#292C70" stop-opacity="0"/></linearGradient>
+        <linearGradient id="fade-bottom" x1="0" y1="0" x2="0" y2="1"><stop offset="55%" stop-color="#292C70" stop-opacity="0"/><stop offset="100%" stop-color="#292C70" stop-opacity="0.9"/></linearGradient>
+      </defs>
+      <rect width="900" height="620" fill="#292C70"/>
+      <rect width="900" height="620" fill="url(#g1)"/>
+      <rect width="900" height="620" fill="url(#g2)"/>
+      <rect width="900" height="620" fill="url(#g3)"/>
+      <rect width="900" height="620" fill="url(#g4)"/>
+
+      <!-- ═══ MAIN TOWER — pushed right, tilted, dominant ═══ -->
+      <!-- Angled tall tower: top-left corner at ~560,30, skewed right -->
+      <g opacity="0.38" stroke="rgba(47,89,168,1)" fill="none">
+        <!-- Front face — parallelogram tilted -->
+        <polygon points="540,20 760,20 800,580 580,580" stroke-width="0.7"/>
+        <!-- Floor plates — 18 floors -->
+        <line x1="542" y1="50" x2="762" y2="50" stroke-width="0.5"/>
+        <line x1="543" y1="80" x2="763" y2="80" stroke-width="0.5"/>
+        <line x1="545" y1="110" x2="765" y2="110" stroke-width="0.5"/>
+        <line x1="547" y1="140" x2="767" y2="140" stroke-width="0.5"/>
+        <line x1="548" y1="170" x2="768" y2="170" stroke-width="0.5"/>
+        <line x1="550" y1="200" x2="770" y2="200" stroke-width="0.5"/>
+        <line x1="551" y1="230" x2="771" y2="230" stroke-width="0.5"/>
+        <line x1="553" y1="260" x2="773" y2="260" stroke-width="0.5"/>
+        <line x1="555" y1="290" x2="775" y2="290" stroke-width="0.5"/>
+        <line x1="556" y1="320" x2="776" y2="320" stroke-width="0.5"/>
+        <line x1="558" y1="350" x2="778" y2="350" stroke-width="0.5"/>
+        <line x1="560" y1="380" x2="780" y2="380" stroke-width="0.5"/>
+        <line x1="562" y1="410" x2="782" y2="410" stroke-width="0.5"/>
+        <line x1="563" y1="440" x2="783" y2="440" stroke-width="0.5"/>
+        <line x1="565" y1="470" x2="785" y2="470" stroke-width="0.5"/>
+        <line x1="567" y1="500" x2="787" y2="500" stroke-width="0.5"/>
+        <line x1="568" y1="530" x2="788" y2="530" stroke-width="0.5"/>
+        <!-- Vertical column lines on front face -->
+        <line x1="600" y1="20" x2="607" y2="580" stroke-width="0.45"/>
+        <line x1="640" y1="20" x2="649" y2="580" stroke-width="0.45"/>
+        <line x1="680" y1="20" x2="691" y2="580" stroke-width="0.45"/>
+        <line x1="720" y1="20" x2="733" y2="580" stroke-width="0.45"/>
+        <!-- Side face — right side, going back in perspective -->
+        <polygon points="760,20 900,60 900,590 800,580" stroke-width="0.6"/>
+        <!-- Side face floor lines -->
+        <line x1="762" y1="50" x2="900" y2="88" stroke-width="0.4"/>
+        <line x1="763" y1="80" x2="900" y2="117" stroke-width="0.4"/>
+        <line x1="765" y1="140" x2="900" y2="175" stroke-width="0.4"/>
+        <line x1="768" y1="200" x2="900" y2="233" stroke-width="0.4"/>
+        <line x1="770" y1="260" x2="900" y2="291" stroke-width="0.4"/>
+        <line x1="773" y1="320" x2="900" y2="349" stroke-width="0.4"/>
+        <line x1="776" y1="380" x2="900" y2="407" stroke-width="0.4"/>
+        <line x1="780" y1="440" x2="900" y2="465" stroke-width="0.4"/>
+        <line x1="784" y1="500" x2="900" y2="523" stroke-width="0.4"/>
+        <!-- Side verticals -->
+        <line x1="830" y1="48" x2="847" y2="583" stroke-width="0.4"/>
+        <line x1="865" y1="54" x2="877" y2="586" stroke-width="0.4"/>
+      </g>
+
+      <!-- ═══ SECOND TOWER — overlapping left, shorter, offset angle ═══ -->
+      <g opacity="0.28" stroke="rgba(47,89,168,1)" fill="none">
+        <polygon points="460,120 640,80 670,580 490,580" stroke-width="0.65"/>
+        <line x1="462" y1="148" x2="642" y2="107" stroke-width="0.45"/>
+        <line x1="464" y1="176" x2="644" y2="135" stroke-width="0.45"/>
+        <line x1="466" y1="204" x2="646" y2="163" stroke-width="0.45"/>
+        <line x1="468" y1="232" x2="648" y2="191" stroke-width="0.45"/>
+        <line x1="470" y1="260" x2="650" y2="219" stroke-width="0.45"/>
+        <line x1="472" y1="290" x2="652" y2="248" stroke-width="0.45"/>
+        <line x1="474" y1="320" x2="654" y2="278" stroke-width="0.45"/>
+        <line x1="476" y1="350" x2="656" y2="308" stroke-width="0.45"/>
+        <line x1="478" y1="380" x2="658" y2="338" stroke-width="0.45"/>
+        <line x1="480" y1="410" x2="660" y2="368" stroke-width="0.45"/>
+        <line x1="482" y1="440" x2="662" y2="398" stroke-width="0.45"/>
+        <line x1="484" y1="470" x2="664" y2="428" stroke-width="0.45"/>
+        <line x1="486" y1="505" x2="666" y2="463" stroke-width="0.45"/>
+        <line x1="488" y1="540" x2="668" y2="498" stroke-width="0.45"/>
+        <line x1="510" y1="122" x2="530" y2="580" stroke-width="0.4"/>
+        <line x1="555" y1="112" x2="578" y2="580" stroke-width="0.4"/>
+        <line x1="600" y1="100" x2="625" y2="580" stroke-width="0.4"/>
+      </g>
+
+      <!-- ═══ LOW HORIZONTAL STRUCTURE — cuts across lower right, like a plinth/podium ═══ -->
+      <g opacity="0.25" stroke="rgba(47,89,168,1)" fill="none">
+        <!-- Wide low block bottom right -->
+        <polygon points="500,480 900,420 900,580 500,580" stroke-width="0.6"/>
+        <line x1="502" y1="500" x2="900" y2="440" stroke-width="0.4"/>
+        <line x1="504" y1="520" x2="900" y2="461" stroke-width="0.4"/>
+        <line x1="506" y1="540" x2="900" y2="481" stroke-width="0.4"/>
+        <line x1="506" y1="560" x2="900" y2="501" stroke-width="0.4"/>
+        <line x1="600" y1="454" x2="600" y2="580" stroke-width="0.4"/>
+        <line x1="700" y1="436" x2="700" y2="580" stroke-width="0.4"/>
+        <line x1="800" y1="427" x2="800" y2="580" stroke-width="0.4"/>
+        <!-- Top face of plinth -->
+        <polygon points="500,480 900,420 920,400 520,455" stroke-width="0.5"/>
+        <line x1="540" y1="452" x2="620" y2="438" stroke-width="0.35"/>
+        <line x1="640" y1="446" x2="720" y2="432" stroke-width="0.35"/>
+        <line x1="740" y1="440" x2="820" y2="426" stroke-width="0.35"/>
+      </g>
+
+      <!-- ═══ CURVED ORGANIC MESH — sweeps from bottom-left, cuts through towers ═══ -->
+      <g opacity="0.18" stroke="rgba(47,89,168,1)" fill="none" stroke-width="0.55">
+        <!-- Main sweeping curves — organic, left-biased, cutting upward through right geometry -->
+        <path d="M -20 620 Q 100 400 280 320 Q 420 260 520 180 Q 580 130 640 60"/>
+        <path d="M -20 600 Q 90 390 270 308 Q 408 248 510 168 Q 572 118 634 48"/>
+        <path d="M -20 580 Q 80 378 260 296 Q 396 236 500 156 Q 562 106 628 36"/>
+        <path d="M -20 558 Q 68 364 248 283 Q 382 222 488 143 Q 550 92 620 22"/>
+        <path d="M -20 534 Q 55 348 234 268 Q 366 206 474 128 Q 536 76 610 6"/>
+        <path d="M -20 508 Q 40 330 218 252 Q 348 188 458 112 Q 520 60 598 -10"/>
+        <path d="M -20 478 Q 24 310 200 234 Q 328 168 440 94 Q 502 42 584 -24"/>
+        <path d="M -20 444 Q 6 288 180 214 Q 306 146 420 75 Q 482 22 568 -40"/>
+        <!-- Cross-section lines on the curved surface -->
+        <path d="M -20 620 Q -10 530 -20 444"/>
+        <path d="M 60 588 Q 68 498 56 414"/>
+        <path d="M 140 548 Q 150 458 140 376"/>
+        <path d="M 220 508 Q 232 420 224 340"/>
+        <path d="M 300 468 Q 312 382 306 304"/>
+        <path d="M 380 428 Q 392 344 388 268"/>
+        <path d="M 460 380 Q 472 300 470 226"/>
+        <path d="M 530 328 Q 542 252 542 180"/>
+        <path d="M 590 270 Q 602 198 604 130"/>
+        <path d="M 636 206 Q 648 140 650 78"/>
+        <!-- Triangulation diagonals on surface -->
+        <line x1="-20" y1="620" x2="60" y2="548"/><line x1="60" y1="548" x2="140" y2="508"/>
+        <line x1="140" y1="508" x2="220" y2="468"/><line x1="220" y1="468" x2="300" y2="428"/>
+        <line x1="300" y1="428" x2="380" y2="380"/><line x1="380" y1="380" x2="460" y2="320"/>
+        <line x1="460" y1="320" x2="530" y2="252"/><line x1="530" y1="252" x2="590" y2="184"/>
+        <line x1="590" y1="184" x2="636" y2="110"/>
+        <line x1="-20" y1="558" x2="60" y2="488"/><line x1="60" y1="488" x2="140" y2="448"/>
+        <line x1="140" y1="448" x2="220" y2="408"/><line x1="220" y1="408" x2="300" y2="368"/>
+        <line x1="300" y1="368" x2="380" y2="318"/><line x1="380" y1="318" x2="460" y2="258"/>
+        <line x1="460" y1="258" x2="530" y2="192"/><line x1="530" y1="192" x2="590" y2="126"/>
+        <line x1="-20" y1="500" x2="60" y2="428"/><line x1="60" y1="428" x2="140" y2="388"/>
+        <line x1="140" y1="388" x2="220" y2="348"/><line x1="220" y1="348" x2="300" y2="308"/>
+        <line x1="300" y1="308" x2="380" y2="258"/><line x1="380" y1="258" x2="460" y2="198"/>
+        <line x1="460" y1="198" x2="530" y2="134"/>
+      </g>
+
+      <!-- ═══ SMALL ACCENT BUILDING — far left, low opacity, fragments ═══ -->
+      <g opacity="0.14" stroke="rgba(47,89,168,1)" fill="none" stroke-width="0.45">
+        <rect x="-20" y="280" width="140" height="340"/>
+        <line x1="-20" y1="310" x2="120" y2="310"/><line x1="-20" y1="345" x2="120" y2="345"/>
+        <line x1="-20" y1="380" x2="120" y2="380"/><line x1="-20" y1="415" x2="120" y2="415"/>
+        <line x1="-20" y1="450" x2="120" y2="450"/><line x1="-20" y1="485" x2="120" y2="485"/>
+        <line x1="-20" y1="520" x2="120" y2="520"/><line x1="-20" y1="555" x2="120" y2="555"/>
+        <line x1="28" y1="280" x2="28" y2="620"/><line x1="74" y1="280" x2="74" y2="620"/>
+      </g>
+
+      <!-- ═══ PERSPECTIVE FLOOR GRID — off-centre, angled toward right ═══ -->
+      <g opacity="0.3">
+        <!-- Receding lines from a right-offset vanishing point ~680, 350 -->
+        <line x1="680" y1="350" x2="0" y2="620" stroke="rgba(47,89,168,0.06)" stroke-width="0.45"/>
+        <line x1="680" y1="350" x2="200" y2="620" stroke="rgba(47,89,168,0.05)" stroke-width="0.4"/>
+        <line x1="680" y1="350" x2="400" y2="620" stroke="rgba(47,89,168,0.045)" stroke-width="0.4"/>
+        <line x1="680" y1="350" x2="600" y2="620" stroke="rgba(47,89,168,0.04)" stroke-width="0.35"/>
+        <line x1="680" y1="350" x2="900" y2="620" stroke="rgba(47,89,168,0.05)" stroke-width="0.4"/>
+        <!-- Horizontal cross-lines -->
+        <line x1="200" y1="470" x2="900" y2="470" stroke="rgba(47,89,168,0.045)" stroke-width="0.4"/>
+        <line x1="300" y1="520" x2="900" y2="520" stroke="rgba(47,89,168,0.04)" stroke-width="0.35"/>
+        <line x1="380" y1="560" x2="900" y2="560" stroke="rgba(47,89,168,0.035)" stroke-width="0.3"/>
+        <line x1="440" y1="590" x2="900" y2="590" stroke="rgba(47,89,168,0.03)" stroke-width="0.3"/>
+      </g>
+
+      <!-- Fade left over wireframes so text stays legible -->
+      <rect width="900" height="620" fill="url(#fade-left)"/>
+      <rect width="900" height="620" fill="url(#fade-bottom)"/>
+    </svg>
+  </div>
+
+  <img class="hero-wireframe-art" src="assets/founder-building-wireframe-adobe.jpeg" alt="" aria-hidden="true">
+
+  <nav>
+    <a class="logo" href="index.html" aria-label="BirdLab home"><img src="assets/birdlab-logo.png" alt="BirdLab R&amp;D"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="about.html" aria-current="page">Founder</a><a class="nav-cta" href="enquiry.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero-content">
+    <img class="founder-portrait" src="assets/alex-amies-founder.webp" alt="Alex Amies, founder of BirdLab">
+    <div class="hero-left">
+      <div class="h1">Alex Amies</div>
+      <div class="h1-sub">MEng MSc CEng FCIBSE MIMechE</div>
+      <p class="hero-p">Alex Amies is a Doctoral Researcher, Chartered Engineer, CIBSE Fellow and entrepreneur specialising in building analytics, automation and the integration of controls with dynamic simulation. He was awarded an IMechE undergraduate scholarship to read Mechanical Engineering at the University of Bristol, graduating with an MEng in 2004. He later completed a second master’s in Building Services Engineering at LSBU, graduating with an MSc in 2016.</p>
+      <p class="hero-p">Alex co-founded re:sustain in 2021, a PropTech start-up which pioneers advanced remote optimisation services for commercial real estate. In 2025, he co-founded BirdLab to support applied research and development at the confluence of industry practice and scientific methodology.</p>
+      <a class="hero-profile-link" href="https://www.kcl.ac.uk/people/alex-amies" target="_blank" rel="noopener noreferrer">King’s College London profile</a>
+    </div>
+    <div class="hero-right">
+      <img class="about-bird-art" src="assets/birdlab-particle-figure.png" alt="" aria-hidden="true">
+      <svg class="dot-wave" viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.78">
+          <circle cx="280" cy="90" r="9" fill="#2F59A8"/><circle cx="260" cy="82" r="8.5" fill="#2F59A8"/><circle cx="300" cy="84" r="8" fill="#2F59A8"/><circle cx="243" cy="78" r="7.5" fill="#2F59A8"/><circle cx="318" cy="80" r="7.5" fill="#2F59A8"/><circle cx="262" cy="100" r="8" fill="#2F59A8"/><circle cx="298" cy="98" r="8" fill="#2F59A8"/><circle cx="226" cy="76" r="7" fill="#2F59A8"/><circle cx="335" cy="78" r="7" fill="#2F59A8"/><circle cx="244" cy="96" r="7" fill="#2F59A8"/><circle cx="316" cy="94" r="7" fill="#2F59A8"/><circle cx="280" cy="108" r="7" fill="#2F59A8"/><circle cx="211" cy="78" r="6.5" fill="#2F59A8"/><circle cx="350" cy="78" r="6.5" fill="#2F59A8"/><circle cx="228" cy="93" r="6" fill="#2F59A8"/><circle cx="332" cy="91" r="6" fill="#2F59A8"/><circle cx="263" cy="111" r="6.5" fill="#2F59A8"/><circle cx="297" cy="109" r="6.5" fill="#2F59A8"/><circle cx="197" cy="82" r="6" fill="#2F59A8"/><circle cx="365" cy="79" r="6" fill="#2F59A8"/><circle cx="212" cy="92" r="6" fill="#2F59A8"/><circle cx="348" cy="90" r="5.5" fill="#2F59A8"/><circle cx="246" cy="108" r="6" fill="#2F59A8"/><circle cx="314" cy="107" r="6" fill="#2F59A8"/><circle cx="280" cy="120" r="6" fill="#2F59A8"/><circle cx="184" cy="87" r="5.5" fill="#2F59A8"/><circle cx="378" cy="82" r="5.5" fill="#2F59A8"/><circle cx="198" cy="98" r="5" fill="#2F59A8"/><circle cx="362" cy="97" r="5" fill="#2F59A8"/><circle cx="229" cy="105" r="5.5" fill="#2F59A8"/><circle cx="331" cy="104" r="5.5" fill="#2F59A8"/><circle cx="264" cy="120" r="5.5" fill="#2F59A8"/><circle cx="296" cy="119" r="5.5" fill="#2F59A8"/><circle cx="172" cy="93" r="5" fill="#2F59A8"/><circle cx="390" cy="86" r="5" fill="#2F59A8"/><circle cx="184" cy="102" r="4.5" fill="#2F59A8"/><circle cx="376" cy="101" r="4.5" fill="#2F59A8"/><circle cx="214" cy="111" r="5" fill="#2F59A8"/><circle cx="346" cy="110" r="5" fill="#2F59A8"/><circle cx="248" cy="125" r="5" fill="#2F59A8"/><circle cx="312" cy="124" r="5" fill="#2F59A8"/><circle cx="280" cy="132" r="5" fill="#2F59A8"/><circle cx="161" cy="100" r="4.5" fill="#2F59A8"/><circle cx="401" cy="91" r="4.5" fill="#2F59A8"/><circle cx="172" cy="109" r="4" fill="#2F59A8"/><circle cx="388" cy="108" r="4" fill="#2F59A8"/><circle cx="200" cy="118" r="4.5" fill="#2F59A8"/><circle cx="360" cy="117" r="4.5" fill="#2F59A8"/><circle cx="233" cy="129" r="4.5" fill="#2F59A8"/><circle cx="327" cy="128" r="4.5" fill="#2F59A8"/><circle cx="151" cy="108" r="4" fill="#2F59A8"/><circle cx="411" cy="97" r="4" fill="#2F59A8"/><circle cx="161" cy="117" r="3.5" fill="#2F59A8"/><circle cx="399" cy="116" r="3.5" fill="#2F59A8"/><circle cx="187" cy="126" r="4" fill="#2F59A8"/><circle cx="373" cy="125" r="4" fill="#2F59A8"/><circle cx="219" cy="135" r="4" fill="#2F59A8"/><circle cx="341" cy="134" r="4" fill="#2F59A8"/><circle cx="141" cy="117" r="3.5" fill="#2F59A8"/><circle cx="420" cy="104" r="3.5" fill="#2F59A8"/><circle cx="150" cy="127" r="3" fill="#2F59A8"/><circle cx="410" cy="125" r="3" fill="#2F59A8"/><circle cx="173" cy="133" r="3.5" fill="#2F59A8"/><circle cx="387" cy="132" r="3.5" fill="#2F59A8"/><circle cx="204" cy="140" r="3.5" fill="#2F59A8"/><circle cx="356" cy="139" r="3.5" fill="#2F59A8"/><circle cx="119" cy="137" r="2.5" fill="#2F59A8"/><circle cx="441" cy="122" r="2.5" fill="#2F59A8"/><circle cx="136" cy="155" r="2" fill="#2F59A8"/><circle cx="424" cy="154" r="2" fill="#2F59A8"/><circle cx="160" cy="157" r="2" fill="#2F59A8"/><circle cx="400" cy="156" r="2" fill="#2F59A8"/><circle cx="84" cy="155" r="1.5" fill="#E4ECF7"/><circle cx="476" cy="148" r="1.5" fill="#E4ECF7"/><circle cx="60" cy="163" r="1" fill="#E4ECF7"/><circle cx="500" cy="160" r="1" fill="#E4ECF7"/><circle cx="36" cy="166" r="0.7" fill="#E4ECF7"/><circle cx="524" cy="165" r="0.7" fill="#E4ECF7"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- FOUNDER PODCAST -->
+<section class="podcast-section" aria-labelledby="podcast-title">
+  <div class="podcast-inner">
+    <div class="podcast-intro">
+      <div>
+        <h2 class="podcast-title" id="podcast-title">The story behind<br><em>BirdLab</em></h2>
+        <p class="podcast-copy">Alex Amies reflects on the experiences that shaped his career, his route into building performance and the ideas behind BirdLab. Listen to the complete conversation or choose a chapter to begin at a particular part of the story.</p>
+      </div>
+      <div class="podcast-video">
+        <iframe name="podcast-player" data-src="https://www.youtube-nocookie.com/embed/Ui3ugNaLMn0" title="The story behind BirdLab - podcast with Alex Amies" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="podcast-local-fallback">
+          <img src="https://i.ytimg.com/vi/Ui3ugNaLMn0/maxresdefault.jpg" alt="The story behind BirdLab podcast">
+          <a class="podcast-local-link" href="https://youtu.be/Ui3ugNaLMn0" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="podcast-chapters">
+      <h3>Chapters</h3>
+      <ol class="chapter-list">
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=0" target="_blank" rel="noopener noreferrer"><span class="chapter-number">01</span><time datetime="PT0S">00:00:00</time><span class="chapter-name">Welcome</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=59" target="_blank" rel="noopener noreferrer"><span class="chapter-number">02</span><time datetime="PT59S">00:00:59</time><span class="chapter-name">Opening thoughts on entrepreneurial engineering</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=233" target="_blank" rel="noopener noreferrer"><span class="chapter-number">03</span><time datetime="PT3M53S">00:03:53</time><span class="chapter-name">Introducing buildings</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=372" target="_blank" rel="noopener noreferrer"><span class="chapter-number">04</span><time datetime="PT6M12S">00:06:12</time><span class="chapter-name">Big commercial buildings</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=546" target="_blank" rel="noopener noreferrer"><span class="chapter-number">05</span><time datetime="PT9M6S">00:09:06</time><span class="chapter-name">Construction variations</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=739" target="_blank" rel="noopener noreferrer"><span class="chapter-number">06</span><time datetime="PT12M19S">00:12:19</time><span class="chapter-name">3rd startup: project management</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=856" target="_blank" rel="noopener noreferrer"><span class="chapter-number">07</span><time datetime="PT14M16S">00:14:16</time><span class="chapter-name">Gaps in the market in general</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=1125" target="_blank" rel="noopener noreferrer"><span class="chapter-number">08</span><time datetime="PT18M45S">00:18:45</time><span class="chapter-name">Architecture</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=1227" target="_blank" rel="noopener noreferrer"><span class="chapter-number">09</span><time datetime="PT20M27S">00:20:27</time><span class="chapter-name">Control strategy oversight</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=1362" target="_blank" rel="noopener noreferrer"><span class="chapter-number">10</span><time datetime="PT22M42S">00:22:42</time><span class="chapter-name">Web analytics</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=1590" target="_blank" rel="noopener noreferrer"><span class="chapter-number">11</span><time datetime="PT26M30S">00:26:30</time><span class="chapter-name">Building variables</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=1734" target="_blank" rel="noopener noreferrer"><span class="chapter-number">12</span><time datetime="PT28M54S">00:28:54</time><span class="chapter-name">Conned into cooling</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=1817" target="_blank" rel="noopener noreferrer"><span class="chapter-number">13</span><time datetime="PT30M17S">00:30:17</time><span class="chapter-name">Building Automation/Management Systems (BAS/BMS)</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=2018" target="_blank" rel="noopener noreferrer"><span class="chapter-number">14</span><time datetime="PT33M38S">00:33:38</time><span class="chapter-name">BAS/BMS home analogy</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=2261" target="_blank" rel="noopener noreferrer"><span class="chapter-number">15</span><time datetime="PT37M41S">00:37:41</time><span class="chapter-name">Bob the building manager</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=2478" target="_blank" rel="noopener noreferrer"><span class="chapter-number">16</span><time datetime="PT41M18S">00:41:18</time><span class="chapter-name">Networked controllers</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=2617" target="_blank" rel="noopener noreferrer"><span class="chapter-number">17</span><time datetime="PT43M37S">00:43:37</time><span class="chapter-name">Autonomous control</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=2827" target="_blank" rel="noopener noreferrer"><span class="chapter-number">18</span><time datetime="PT47M7S">00:47:07</time><span class="chapter-name">BAS/BMS point types</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=2964" target="_blank" rel="noopener noreferrer"><span class="chapter-number">19</span><time datetime="PT49M24S">00:49:24</time><span class="chapter-name">Record savings achieved</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=3065" target="_blank" rel="noopener noreferrer"><span class="chapter-number">20</span><time datetime="PT51M5S">00:51:05</time><span class="chapter-name">Retrofit embodied carbon</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=3219" target="_blank" rel="noopener noreferrer"><span class="chapter-number">21</span><time datetime="PT53M39S">00:53:39</time><span class="chapter-name">BAS/BMS experience</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=3323" target="_blank" rel="noopener noreferrer"><span class="chapter-number">22</span><time datetime="PT55M23S">00:55:23</time><span class="chapter-name">Building analytics</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=3533" target="_blank" rel="noopener noreferrer"><span class="chapter-number">23</span><time datetime="PT58M53S">00:58:53</time><span class="chapter-name">Reactive vs proactive maintenance</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=3684" target="_blank" rel="noopener noreferrer"><span class="chapter-number">24</span><time datetime="PT1H1M24S">01:01:24</time><span class="chapter-name">Building Energy Management Systems (BEMS)</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=3832" target="_blank" rel="noopener noreferrer"><span class="chapter-number">25</span><time datetime="PT1H3M52S">01:03:52</time><span class="chapter-name">Discovering a gap in the market</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=4076" target="_blank" rel="noopener noreferrer"><span class="chapter-number">26</span><time datetime="PT1H7M56S">01:07:56</time><span class="chapter-name">Building Information Modelling (BIM)</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=4302" target="_blank" rel="noopener noreferrer"><span class="chapter-number">27</span><time datetime="PT1H11M42S">01:11:42</time><span class="chapter-name">4th &amp; 5th startups: filling the market gap</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=4402" target="_blank" rel="noopener noreferrer"><span class="chapter-number">28</span><time datetime="PT1H13M22S">01:13:22</time><span class="chapter-name">Building simulation applied</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=4521" target="_blank" rel="noopener noreferrer"><span class="chapter-number">29</span><time datetime="PT1H15M21S">01:15:21</time><span class="chapter-name">Savings calculation methodology</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=4800" target="_blank" rel="noopener noreferrer"><span class="chapter-number">30</span><time datetime="PT1H20M">01:20:00</time><span class="chapter-name">Overall savings achieved</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=4937" target="_blank" rel="noopener noreferrer"><span class="chapter-number">31</span><time datetime="PT1H22M17S">01:22:17</time><span class="chapter-name">Global asset managers</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=5045" target="_blank" rel="noopener noreferrer"><span class="chapter-number">32</span><time datetime="PT1H24M5S">01:24:05</time><span class="chapter-name">6th startup: special purpose vehicle</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=5204" target="_blank" rel="noopener noreferrer"><span class="chapter-number">33</span><time datetime="PT1H26M44S">01:26:44</time><span class="chapter-name">Future research &amp; development</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=5311" target="_blank" rel="noopener noreferrer"><span class="chapter-number">34</span><time datetime="PT1H28M31S">01:28:31</time><span class="chapter-name">Working with AI models</span></a></li>
+        <li><a class="chapter-link" href="https://youtu.be/Ui3ugNaLMn0?t=5371" target="_blank" rel="noopener noreferrer"><span class="chapter-number">35</span><time datetime="PT1H29M31S">01:29:31</time><span class="chapter-name">Closing thoughts on entrepreneurial engineering</span></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">Bir&amp;d Lab · Building Informatics R&amp;D Lab</div>
+  <div class="f-links"><a href="index.html">Home</a><a href="about.html">Founder</a><a href="enquiry.html">Contact</a><a href="privacy.html">Privacy</a><a class="linkedin-link" href="https://www.linkedin.com/in/alex-amies-a12a0485/" target="_blank" rel="noopener noreferrer" aria-label="Alex Amies on LinkedIn"><img src="assets/linkedin-white.png" alt="" aria-hidden="true"></a></div>
+  <div class="f-copy">© 2026 Building Informatics R&amp;D Lab Ltd<br>King’s College London, Strand, London WC2R 2LS</div>
+</footer>
+
+</div>
+<script>
+  const podcastVideo = document.querySelector('.podcast-video');
+  const podcastFrame = podcastVideo?.querySelector('iframe');
+
+  if (podcastVideo && podcastFrame) {
+    if (window.location.protocol === 'file:') {
+      podcastVideo.classList.add('is-local');
+    } else {
+      podcastFrame.src = podcastFrame.dataset.src;
+
+      document.querySelectorAll('.chapter-link').forEach((chapterLink) => {
+        chapterLink.addEventListener('click', (event) => {
+          event.preventDefault();
+          const start = new URL(chapterLink.href).searchParams.get('t') || '0';
+          podcastFrame.src = `${podcastFrame.dataset.src}?start=${start}&autoplay=1`;
+          podcastVideo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      });
+    }
+  }
+</script>
+</body>
+</html>
