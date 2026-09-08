@@ -42,7 +42,9 @@
     textarea{min-height:180px;resize:vertical;}
     input:focus,textarea:focus{border-color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.1);}
     .form-note{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.24);border-radius:7px;color:#fff;font-size:11px;line-height:1.7;padding:16px 18px;}
-    .submit-row{align-items:center;display:flex;gap:18px;justify-content:space-between;}\n    .form-status{display:none;font-size:12px;line-height:1.65;margin-top:-8px;}\n    .form-status.success,.form-status.error{color:#fff;display:block;}
+    .submit-row{align-items:center;display:flex;gap:18px;justify-content:space-between;}
+    .form-status{display:none;font-size:12px;line-height:1.65;margin-top:-8px;}
+    .form-status.success,.form-status.error{color:#fff;display:block;}
     button{background:#fff;border:1px solid #fff;border-radius:7px;color:var(--brand-primary);cursor:pointer;font:500 11px 'Inter',sans-serif;letter-spacing:.12em;padding:15px 28px;text-transform:uppercase;}
     button:hover{filter:brightness(1.08);}
     .small-email{color:#fff;font-size:11px;line-height:1.6;text-align:right;}
@@ -90,13 +92,14 @@
               <div><label for="first-name">First name</label><input id="first-name" name="firstName" autocomplete="given-name" required></div>
               <div><label for="last-name">Last name</label><input id="last-name" name="lastName" autocomplete="family-name" required></div>
             </div>
-            <div><label for="work-email">Work email</label><input id="work-email" name="email" type="email" autocomplete="email" required></div>
-            <div><label for="subject">Email subject</label><input id="subject" name="subject" required></div>
+            <div><label for="work-email">Email</label><input id="work-email" name="email" type="email" autocomplete="email" required></div>
+            <div><label for="subject">Subject</label><input id="subject" name="subject" required></div>
             <div><label for="message">Your message</label><textarea id="message" name="message" required></textarea></div>
             <p class="form-note">Selecting “SEND ENQUIRY” submits the information above securely to BirdLab using our form-processing provider. Your enquiry will be delivered to alex@birdlab.tech. See the <a href="privacy.html">Privacy Notice</a> for information about how BirdLab uses enquiries.</p>
             <div class="submit-row">
               <button type="submit">SEND ENQUIRY</button>
             </div>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
