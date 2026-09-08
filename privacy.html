@@ -7,7 +7,7 @@
   <meta name="description" content="How BirdLab uses personal information submitted through its enquiry form.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
   <style>
     :root{--brand-primary:#292C70;--brand-accent:#2F59A8;--brand-light:#E4ECF7;--brand-turquoise:#6EDAD3;}
     *{box-sizing:border-box;margin:0;padding:0;}
@@ -20,7 +20,7 @@
     .nav-links{align-items:center;display:flex;gap:18px;}
     .nav-links a{border:1px solid transparent;border-radius:7px;color:rgba(228,236,247,.78);font-size:11px;letter-spacing:.14em;padding:10px 18px;text-decoration:none;text-transform:uppercase;}
     .nav-links a[aria-current="page"]{border-color:rgba(228,236,247,.55);color:var(--brand-light);}
-    main{margin:0;max-width:1120px;padding:96px 6vw 110px;}
+    main{margin:0 auto;max-width:1280px;padding:96px 6vw 110px;width:100%;}
     .notice-heading{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,68px);font-weight:300;letter-spacing:-.02em;line-height:.95;}
     .effective-date{font-size:11px;letter-spacing:.1em;margin-top:22px;text-transform:uppercase;}
     .notice-intro{font-size:15px;line-height:1.9;margin-top:36px;max-width:760px;}
@@ -59,8 +59,36 @@
 
     <main>
       <h1 class="notice-heading">Privacy Notice</h1>
-      <p>Website enquiry information is submitted through the form-processing service described above rather than through the visitor’s own email application.</p>
-          <p>Once sent, the message will be processed through the email services used by you and BirdLab.</p>
+      <p class="effective-date">Effective 8 September 2026</p>
+      <p class="notice-intro">This notice explains how BirdLab (Building Informatics R&amp;D Lab Ltd) uses personal information submitted through the enquiry form on this website or sent directly to BirdLab by email.</p>
+
+      <section class="notice-section">
+        <h2>Who we are</h2>
+        <div class="notice-copy">
+          <p>BirdLab (Building Informatics R&amp;D Lab Ltd) is the organisation responsible for deciding how personal information covered by this notice is used.</p>
+          <p>For privacy questions or requests, contact <a href="mailto:events@birdlab.tech">events@birdlab.tech</a>.</p>
+        </div>
+      </section>
+
+      <section class="notice-section">
+        <h2>Information we collect</h2>
+        <div class="notice-copy">
+          <p>When you make an enquiry, BirdLab may receive:</p>
+          <ul>
+            <li>your first and last name;</li>
+            <li>your work email address;</li>
+            <li>the subject of your enquiry;</li>
+            <li>the contents of your message; and</li>
+            <li>any other information you choose to include in subsequent correspondence.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="notice-section">
+        <h2>How the form works</h2>
+        <div class="notice-copy">
+          <p>Website enquiry information is submitted through Formspree, a third-party form-processing service, and is then delivered to BirdLab. The enquiry form therefore does not require the visitor’s own email application to open in order to send a message.</p>
+          <p>Formspree processes the information submitted through the form on BirdLab’s behalf for the purpose of receiving and delivering the enquiry. Once received by BirdLab, the message may also be processed through the email and IT services used by BirdLab.</p>
         </div>
       </section>
 
@@ -124,9 +152,9 @@
     </main>
 
     <footer>
-      <div class="f-logo">Bir&amp;d Lab · Building Informatics R&amp;D</div>
+      <div class="f-logo">Bir&amp;d Lab · Building Informatics R&amp;D Lab</div>
       <div class="f-links"><a href="index.html">Home</a><a href="about.html">Founder</a><a href="enquiry.html">Contact</a><a href="privacy.html">Privacy</a><a class="linkedin-link" href="https://www.linkedin.com/in/alex-amies-a12a0485/" target="_blank" rel="noopener noreferrer" aria-label="Alex Amies on LinkedIn"><img src="assets/linkedin-white.png" alt="" aria-hidden="true"></a></div>
-      <div class="f-copy">© 2026 Bird Lab Ltd<br>Building Informatics R&amp;D Lab<br>King’s College London<br>London WC2R 2LS</div>
+      <div class="f-copy">© 2026 Building Informatics R&amp;D Lab Ltd<br>King’s College London, Strand, London WC2R 2LS</div>
     </footer>
   </div>
 </body>
