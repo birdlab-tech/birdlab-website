@@ -45,8 +45,13 @@ nav{position:relative;z-index:10;display:flex;align-items:center;justify-content
 .btn-g{background:transparent;color:rgba(228,236,247,0.65);padding:11px 26px;border-radius:5px;font-size:12.5px;cursor:pointer;letter-spacing:0.04em;border:0.5px solid rgba(47,89,168,0.22);font-family:'Inter',sans-serif;}
 .hero-right{display:flex;align-items:center;justify-content:center;}
 .dot-wave{width:100%;max-width:300px;opacity:0.8;}
-.hero-bird-video{display:block;height:auto;opacity:.82;pointer-events:none;position:absolute;right:2%;top:24%;width:min(64.125vw,903px);z-index:4;-webkit-mask-image:radial-gradient(ellipse at center,#000 48%,rgba(0,0,0,.82) 62%,transparent 82%);mask-image:radial-gradient(ellipse at center,#000 48%,rgba(0,0,0,.82) 62%,transparent 82%);}
+.hero-bird-video{display:block;height:auto;opacity:.82;pointer-events:none;position:absolute;right:2%;top:6%;width:min(64.125vw,903px);z-index:4;-webkit-mask-image:radial-gradient(ellipse at center,#000 48%,rgba(0,0,0,.82) 62%,transparent 82%);mask-image:radial-gradient(ellipse at center,#000 48%,rgba(0,0,0,.82) 62%,transparent 82%);}
 .hero-right .dot-wave{display:none;}
+.mobile-bird-video-wrap{display:none;}
+.mobile-bird-video{
+  display:block;height:auto;width:100%;
+}
+
 
 .sect{padding:64px 36px;position:relative;overflow:hidden;}
 .sect-inner{position:relative;z-index:2;}
@@ -97,6 +102,20 @@ nav{padding:28px 6vw;border-bottom:0;}
 .logo{font-size:20px;}.nav-links{gap:18px}.nav-links a{border:1px solid transparent;border-radius:7px;color:rgba(228,236,247,.78);font-size:11px;letter-spacing:.14em;padding:10px 18px;text-transform:uppercase;}
 .nav-cta{border-color:transparent;padding:10px 18px;text-decoration:none;}
 .nav-links a[aria-current="page"]{border-color:rgba(228,236,247,.55);color:var(--brand-light);}
+.mobile-menu{display:none;position:relative;}
+.menu-toggle{align-items:center;background:transparent;border:1px solid rgba(228,236,247,.55);border-radius:7px;cursor:pointer;display:flex;height:46px;justify-content:center;padding:0;width:52px;}
+.menu-toggle-lines{display:flex;flex-direction:column;gap:5px;width:19px;}
+.menu-toggle-lines span{background:var(--brand-light);display:block;height:1px;transition:transform .2s ease,opacity .2s ease;width:100%;}
+.menu-toggle[aria-expanded="true"] .menu-toggle-lines span:first-child{transform:translateY(6px) rotate(45deg);}
+.menu-toggle[aria-expanded="true"] .menu-toggle-lines span:nth-child(2){opacity:0;}
+.menu-toggle[aria-expanded="true"] .menu-toggle-lines span:last-child{transform:translateY(-6px) rotate(-45deg);}
+.mobile-menu-panel{background:rgba(41,44,112,.98);border:1px solid rgba(228,236,247,.28);border-radius:7px;box-shadow:0 14px 36px rgba(12,16,60,.24);display:none;min-width:190px;overflow:hidden;position:absolute;right:0;top:56px;z-index:30;}
+.mobile-menu-panel.open{display:block;}
+.mobile-menu-panel a{border-bottom:1px solid rgba(228,236,247,.13);color:rgba(228,236,247,.82);display:block;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;padding:16px 20px;text-decoration:none;text-transform:uppercase;}
+.mobile-menu-panel a:last-child{border-bottom:0;}
+.mobile-menu-panel a[aria-current="page"]{color:var(--brand-light);}
+.mobile-menu-panel a:hover,.mobile-menu-panel a:focus{background:rgba(228,236,247,.07);outline:none;}
+
 .hero-content{min-height:440px;padding:35px 6vw 45px;grid-template-columns:1.15fr .85fr;gap:5vw;}
 .badge{border-color:rgba(228,236,247,.28);}.badge span,.eyebrow{color:var(--brand-light);}
 .h1{font-size:clamp(42px,5vw,68px);line-height:.95;letter-spacing:-.02em;}.h1 em{color:var(--brand-turquoise);opacity:1;}
@@ -130,7 +149,7 @@ nav{padding:28px 6vw;border-bottom:0;}
 .cta-inner{padding:96px 6vw;}.cta-h{font-size:clamp(48px,6vw,76px);line-height:.94;}.cta-p{font-size:14px;max-width:560px;}
 footer{padding:34px 6vw;}
 @media(max-width:820px){
-  .hero{min-height:auto;}nav{padding:20px 22px}.nav-links{gap:14px}.nav-links>a:not([aria-current="page"]){display:none}.hero-content{grid-template-columns:1fr;min-height:430px;padding:38px 22px 46px}.hero-right,.hero-wireframe-art{display:none}.hero-bird-video{display:none}.h1{font-size:42px}.sect{padding:64px 22px}.two-col{grid-template-columns:1fr;gap:52px}.stats{grid-template-columns:1fr}.stat:not(:last-child){border-right:0;border-bottom:1px solid rgba(228,236,247,.14)}.process-steps{grid-template-columns:1fr 1fr;gap:40px 18px}.p-line{display:none}.cta-inner{padding:70px 22px}footer{align-items:flex-start;flex-direction:column;gap:14px;padding:28px 22px}.f-links{order:2}.f-copy{align-self:flex-end}.particle-figure-art{opacity:.1;right:-30%;width:75%}}
+  .hero{min-height:auto;}nav{padding:20px 22px}.nav-links{display:none}.mobile-menu{display:block}.hero-content{grid-template-columns:1fr;min-height:auto;padding:38px 22px 18px}.hero-right,.hero-wireframe-art{display:none}.hero-bird-video{display:none}.mobile-bird-video-wrap{display:block;margin:0 -22px -1px}.mobile-bird-video{width:100%;height:auto}.h1{font-size:42px}.sect{padding:64px 22px}.two-col{grid-template-columns:1fr;gap:52px}.stats{grid-template-columns:1fr}.stat:not(:last-child){border-right:0;border-bottom:1px solid rgba(228,236,247,.14)}.process-steps{grid-template-columns:1fr 1fr;gap:40px 18px}.p-line{display:none}.cta-inner{padding:70px 22px}footer{align-items:flex-start;flex-direction:column;gap:14px;padding:28px 22px}.f-links{order:2}.f-copy{align-self:flex-end}.particle-figure-art{opacity:.1;right:-30%;width:75%}}
 @media(max-width:520px){.feat-grid,.process-steps{grid-template-columns:1fr}.feat:nth-child(odd){border-right:0}.feat:nth-child(even){padding-left:0}.btns{align-items:stretch;flex-direction:column}.h1{font-size:42px}.academic-callout span{font-size:26px;padding:16px 0}}
 @media(prefers-reduced-motion:reduce){.hero-bird-video{display:none;}}
 </style>
@@ -316,14 +335,21 @@ footer{padding:34px 6vw;}
     <div class="nav-links">
       <a href="index.html" aria-current="page">Home</a><a href="about.html">Founder</a><a class="nav-cta" href="enquiry.html">Contact</a>
     </div>
+    <div class="mobile-menu">
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="menu-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+      <div class="mobile-menu-panel" id="mobile-nav">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">Founder</a>
+        <a href="enquiry.html">Contact</a>
+      </div>
+    </div>
   </nav>
 
   <div class="hero-content">
     <div class="hero-left">
       <div class="h1"><em>Optimising</em><br>Optimisation</div>
-      <div class="btns">
-        <a class="btn-p" href="about.html">Founder</a>
-      </div>
     </div>
     <div class="hero-right">
       <svg class="dot-wave" viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg">
@@ -332,6 +358,12 @@ footer{padding:34px 6vw;}
         </g>
       </svg>
     </div>
+  </div>
+
+  <div class="mobile-bird-video-wrap" aria-hidden="true">
+    <video class="mobile-bird-video" autoplay muted loop playsinline preload="metadata">
+      <source src="assets/birdlab-particle-bird-mobile.mp4" type="video/mp4">
+    </video>
   </div>
 </div>
 
@@ -444,5 +476,24 @@ footer{padding:34px 6vw;}
 </footer>
 
 </div>
+
+<script>
+(function(){
+  const menu=document.querySelector('.mobile-menu');
+  if(!menu)return;
+  const toggle=menu.querySelector('.menu-toggle');
+  const panel=menu.querySelector('.mobile-menu-panel');
+  function closeMenu(){panel.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');}
+  toggle.addEventListener('click',function(){
+    const opening=!panel.classList.contains('open');
+    panel.classList.toggle('open',opening);
+    toggle.setAttribute('aria-expanded',opening?'true':'false');
+    toggle.setAttribute('aria-label',opening?'Close navigation menu':'Open navigation menu');
+  });
+  document.addEventListener('click',function(e){if(!menu.contains(e.target))closeMenu();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  window.addEventListener('resize',function(){if(window.innerWidth>820)closeMenu();});
+})();
+</script>
 </body>
 </html>
