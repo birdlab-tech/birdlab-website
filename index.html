@@ -501,17 +501,41 @@ footer{padding:34px 6vw;}
   const mobileVideo=document.querySelector('.mobile-bird-video');
   if(!mobileVideo)return;
 
-  function resumeMobileVideo(){
-    if(mobileVideo.paused){
-      mobileVideo.play().catch(function(){});
-    }
+  let restartTimer;
+
+  function pauseMobileVideo(){
+    mobileVideo.pause();
+  }
+
+  function restartMobileVideo(){
+    if(document.hidden)return;
+
+    clearTimeout(restartTimer);
+    restartTimer=setTimeout(function(){
+      mobileVideo.pause();
+
+      try{
+        mobileVideo.currentTime=0;
+      }catch(e){}
+
+      const playPromise=mobileVideo.play();
+      if(playPromise && typeof playPromise.catch==='function'){
+        playPromise.catch(function(){});
+      }
+    },120);
   }
 
   document.addEventListener('visibilitychange',function(){
-    if(!document.hidden)resumeMobileVideo();
+    if(document.hidden){
+      pauseMobileVideo();
+    }else{
+      restartMobileVideo();
+    }
   });
-  window.addEventListener('pageshow',resumeMobileVideo);
-  window.addEventListener('focus',resumeMobileVideo);
+
+  window.addEventListener('pagehide',pauseMobileVideo);
+  window.addEventListener('pageshow',restartMobileVideo);
+  window.addEventListener('focus',restartMobileVideo);
 })();
 </script>
 </body>
