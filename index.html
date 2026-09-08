@@ -495,5 +495,24 @@ footer{padding:34px 6vw;}
   window.addEventListener('resize',function(){if(window.innerWidth>820)closeMenu();});
 })();
 </script>
+
+<script>
+(function(){
+  const mobileVideo=document.querySelector('.mobile-bird-video');
+  if(!mobileVideo)return;
+
+  function resumeMobileVideo(){
+    if(mobileVideo.paused){
+      mobileVideo.play().catch(function(){});
+    }
+  }
+
+  document.addEventListener('visibilitychange',function(){
+    if(!document.hidden)resumeMobileVideo();
+  });
+  window.addEventListener('pageshow',resumeMobileVideo);
+  window.addEventListener('focus',resumeMobileVideo);
+})();
+</script>
 </body>
 </html>
