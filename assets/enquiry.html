@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enquiries | BirdLab</title>
+  <meta name="description" content="Contact BirdLab about research, industry partnerships and commercial building performance optimisation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{--brand-primary:#292C70;--brand-accent:#2F59A8;--brand-light:#E4ECF7;--brand-turquoise:#6EDAD3;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--brand-primary);color:var(--brand-light);font-family:'Inter',sans-serif;font-weight:300;}
+    a{color:inherit;}
+    .page{min-height:100vh;overflow:hidden;position:relative;}
+    .page::before{background:linear-gradient(120deg,#292C70 0%,#2F59A8 55%,#292C70 100%);content:'';inset:0;pointer-events:none;position:absolute;}
+    .page::after{background:repeating-linear-gradient(115deg,transparent 0 115px,rgba(228,236,247,.035) 116px,transparent 117px 230px);content:'';inset:0;pointer-events:none;position:absolute;}
+    .page-wireframe-art{filter:invert(1) grayscale(1) contrast(1.22);height:auto;mix-blend-mode:screen;opacity:.28;pointer-events:none;position:absolute;right:-8%;top:70px;width:min(100vw,1500px);z-index:0;-webkit-mask-image:linear-gradient(90deg,transparent 2%,rgba(0,0,0,.4) 32%,#000 68%);mask-image:linear-gradient(90deg,transparent 2%,rgba(0,0,0,.4) 32%,#000 68%);}
+    nav{align-items:center;border-bottom:0;display:flex;justify-content:space-between;padding:28px 6vw;position:relative;z-index:2;}
+    .logo{align-items:center;display:inline-flex;text-decoration:none;}
+    .logo img{display:block;height:auto;width:196px;}
+    .logo span{opacity:.55;}
+    .nav-links{align-items:center;display:flex;gap:18px;}
+    .nav-links a{border:1px solid transparent;border-radius:7px;color:rgba(228,236,247,.78);font-size:11px;letter-spacing:.14em;padding:10px 18px;text-decoration:none;text-transform:uppercase;}
+    .nav-links a[aria-current="page"]{border-color:rgba(228,236,247,.55);color:var(--brand-light);}
+    .nav-cta{border-color:transparent;color:var(--brand-light)!important;}
+    main{position:relative;z-index:1;}
+    .intro{display:grid;gap:8vw;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);margin:0;max-width:none;padding:110px 6vw 45px;}
+    .eyebrow{color:var(--brand-light);font-size:10px;letter-spacing:.22em;margin-bottom:18px;opacity:.72;text-transform:uppercase;}
+    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,68px);font-weight:300;letter-spacing:-.02em;line-height:.95;}
+    h1 em{color:var(--brand-turquoise);font-style:italic;opacity:1;}
+    .intro-copy{color:var(--brand-light);font-size:13px;line-height:1.82;margin-top:22px;max-width:430px;}
+    .intro-copy a{color:inherit;text-decoration-color:rgba(228,236,247,.55);text-underline-offset:3px;}
+    .enquiry-bird-art{display:block;margin:42px auto 0;mix-blend-mode:screen;opacity:.42;pointer-events:none;width:min(78%,320px);}
+    .form-wrap{background:transparent;border:0;color:#fff;padding:0;}
+    form{display:grid;gap:24px;}
+    .name-row{display:grid;gap:20px;grid-template-columns:1fr 1fr;}
+    label{display:block;font-size:10px;font-weight:500;letter-spacing:.2em;margin-bottom:10px;text-transform:uppercase;}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,.72);border-radius:7px;caret-color:#fff;color:#fff;font:300 14px/1.5 'Inter',sans-serif;outline:none;padding:14px 16px;width:100%;}
+    input{height:52px;}
+    textarea{min-height:180px;resize:vertical;}
+    input:focus,textarea:focus{border-color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.1);}
+    .form-note{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.24);border-radius:7px;color:#fff;font-size:11px;line-height:1.7;padding:16px 18px;}
+    .submit-row{align-items:center;display:flex;gap:18px;justify-content:space-between;}
+    .form-status{display:none;font-size:12px;line-height:1.65;margin-top:-8px;}
+    .form-status.success,.form-status.error{color:#fff;display:block;}
+    button{background:#fff;border:1px solid #fff;border-radius:7px;color:var(--brand-primary);cursor:pointer;font:500 11px 'Inter',sans-serif;letter-spacing:.12em;padding:15px 28px;text-transform:uppercase;}
+    button:hover{filter:brightness(1.08);}
+    .small-email{color:#fff;font-size:11px;line-height:1.6;text-align:right;}
+    .small-email a{color:#fff;}
+    footer{align-items:center;border-top:1px solid rgba(228,236,247,.1);display:flex;justify-content:space-between;margin-top:36px;padding:24px 36px;position:relative;z-index:1;}
+    .f-logo{color:var(--brand-light);font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.22em;opacity:1;text-transform:uppercase;}
+    .f-links{align-items:center;display:flex;gap:20px;}
+    .f-links a{color:var(--brand-light);font-size:11px;letter-spacing:.06em;text-decoration:none;}
+    .f-links .linkedin-link{align-items:center;display:inline-flex;height:22px;justify-content:center;letter-spacing:0;width:24px;}
+    .linkedin-link img{display:block;height:20px;width:auto;}
+    .f-copy{color:var(--brand-light);font-size:11px;line-height:1.55;max-width:440px;opacity:1;text-align:right;}
+    @media(max-width:820px){
+      nav{padding:18px 22px;}.nav-links{gap:14px}.nav-links a:not([aria-current="page"]){display:none;}
+      .intro{grid-template-columns:1fr;padding:54px 22px 16px;}h1{font-size:42px;}.form-wrap{padding:24px;}.enquiry-bird-art,.page-wireframe-art{display:none;}
+      footer{align-items:flex-start;flex-direction:column;gap:10px;padding:22px;}.f-copy{align-self:flex-end;}
+    }
+    @media(max-width:560px){.name-row{grid-template-columns:1fr}.submit-row{align-items:stretch;flex-direction:column}.small-email{text-align:left}button{width:100%;}}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <img class="page-wireframe-art" src="assets/founder-building-wireframe-adobe.jpeg" alt="" aria-hidden="true">
+    <nav aria-label="Primary navigation">
+      <a class="logo" href="index.html" aria-label="BirdLab home"><img src="assets/birdlab-logo.png" alt="BirdLab R&amp;D"></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">Founder</a>
+        <a class="nav-cta" href="enquiry.html" aria-current="page">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="intro">
+        <div>
+          <h1>Enquiries</h1>
+          <p class="intro-copy">Every few months, BirdLab hosts technical presentations, seminars and other industry events in collaboration with academic institutions and commercial partners. Individuals with an interest in BirdLab's work are welcome to register their interest by completing the enquiry form below. Invitations are issued at the organiser's discretion according to the nature and capacity of each event.</p>
+          <p class="intro-copy">Please note that BirdLab does not engage with unsolicited sales approaches through this channel. Where specialist products or services are required, suppliers are selected following an active search and procurement process.</p>
+          <img class="enquiry-bird-art" src="assets/birdlab-particle-figure.png" alt="" aria-hidden="true">
+        </div>
+
+        <div class="form-wrap">
+          <form id="enquiry-form" action="https://formspree.io/f/xzebkvav" method="POST">
+            <div class="name-row">
+              <div><label for="first-name">First name</label><input id="first-name" name="firstName" autocomplete="given-name" required></div>
+              <div><label for="last-name">Last name</label><input id="last-name" name="lastName" autocomplete="family-name" required></div>
+            </div>
+            <div><label for="work-email">Email</label><input id="work-email" name="email" type="email" autocomplete="email" required></div>
+            <div><label for="subject">Subject</label><input id="subject" name="subject" required></div>
+            <div><label for="message">Your message</label><textarea id="message" name="message" required></textarea></div>
+            <p class="form-note">Selecting “SEND ENQUIRY” submits the information above securely to BirdLab using our form-processing provider. Your enquiry will be delivered to alex@birdlab.tech. See the <a href="privacy.html">Privacy Notice</a> for information about how BirdLab uses enquiries.</p>
+            <div class="submit-row">
+              <button type="submit">SEND ENQUIRY</button>
+            </div>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="f-logo">Bir&amp;d Lab · Building Informatics R&amp;D Lab</div>
+      <div class="f-links"><a href="index.html">Home</a><a href="about.html">Founder</a><a href="enquiry.html">Contact</a><a href="privacy.html">Privacy</a><a class="linkedin-link" href="https://www.linkedin.com/in/alex-amies-a12a0485/" target="_blank" rel="noopener noreferrer" aria-label="Alex Amies on LinkedIn"><img src="assets/linkedin-white.png" alt="" aria-hidden="true"></a></div>
+      <div class="f-copy">© 2026 Building Informatics R&amp;D Lab Ltd<br>King’s College London, Strand, London WC2R 2LS</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('enquiry-form').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const form=event.currentTarget, button=form.querySelector('button[type="submit"]'), status=document.getElementById('form-status');
+      button.disabled=true; button.textContent='SENDING…'; status.className='form-status'; status.textContent='';
+      try {
+        const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+        if(!response.ok) throw new Error('Submission failed');
+        form.reset(); status.className='form-status success'; status.textContent='Thank you. Your enquiry has been sent.';
+      } catch(error) {
+        status.className='form-status error'; status.textContent='Sorry, the enquiry could not be sent. Please email alex@birdlab.tech.';
+      } finally {
+        button.disabled=false; button.textContent='SEND ENQUIRY';
+      }
+    });
+  </script>
+</body>
+</html>
