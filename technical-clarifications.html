@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Clarifications | BirdLab</title>
+  <meta name="description" content="Technical clarifications relating to The Story Behind BirdLab podcast.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{--brand-primary:#292C70;--brand-accent:#2F59A8;--brand-light:#E4ECF7;--brand-turquoise:#6EDAD3;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:#fff;color:var(--brand-primary);font-family:'Inter',sans-serif;font-weight:300;}
+    a{color:inherit;}
+    .page{min-height:100vh;overflow:hidden;position:relative;}
+    nav{align-items:center;background:linear-gradient(120deg,#292C70 0%,#2F59A8 58%,#292C70 100%);display:flex;justify-content:space-between;padding:28px 6vw;}
+    .logo{align-items:center;display:inline-flex;text-decoration:none;}
+    .logo img{display:block;height:auto;width:196px;}
+    .nav-links{align-items:center;display:flex;gap:18px;}
+    .nav-links a{border:1px solid transparent;border-radius:7px;color:rgba(228,236,247,.78);font-size:11px;letter-spacing:.14em;padding:10px 18px;text-decoration:none;text-transform:uppercase;}
+    .nav-links a[aria-current="page"]{border-color:rgba(228,236,247,.55);color:var(--brand-light);}
+    main{margin:0 auto;max-width:1280px;padding:96px 6vw 110px;width:100%;}
+    .notice-heading{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,68px);font-weight:300;letter-spacing:-.02em;line-height:.95;}
+    .effective-date{font-size:11px;letter-spacing:.1em;margin-top:22px;text-transform:uppercase;}
+    .notice-intro{font-size:15px;line-height:1.9;margin-top:36px;max-width:760px;}
+    .notice-section{border-top:1px solid rgba(41,44,112,.18);display:grid;gap:5vw;grid-template-columns:minmax(180px,.5fr) minmax(0,1.5fr);margin-top:54px;padding-top:30px;}
+    .notice-section h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;line-height:1.1;}
+    .notice-copy{max-width:720px;}
+    .notice-copy p,.notice-copy li{font-size:13px;line-height:1.85;}
+    .notice-copy p+p{margin-top:16px;}
+    .notice-copy ul{padding-left:20px;}
+    .notice-copy li+li{margin-top:7px;}
+    .notice-copy a{text-decoration-thickness:1px;text-underline-offset:4px;}
+    footer{align-items:center;background:var(--brand-primary);color:var(--brand-light);display:flex;justify-content:space-between;padding:34px 6vw;}
+    .f-logo{font-size:11px;letter-spacing:.22em;text-transform:uppercase;}
+    .f-links{align-items:center;display:flex;gap:20px;}
+    .f-links a{font-size:11px;letter-spacing:.06em;text-decoration:none;}
+    .f-links .linkedin-link{align-items:center;display:inline-flex;height:22px;justify-content:center;letter-spacing:0;width:24px;}
+    .linkedin-link img{display:block;height:20px;width:auto;}
+    .f-copy{font-size:11px;letter-spacing:.04em;line-height:1.55;max-width:440px;text-align:right;}
+    @media(max-width:820px){
+      nav{padding:20px 22px;}.nav-links{display:none;}
+      main{padding:68px 22px 78px;}.notice-section{gap:18px;grid-template-columns:1fr;margin-top:42px;}
+      footer{align-items:flex-start;flex-direction:column;gap:14px;padding:28px 22px;}.f-links{flex-wrap:wrap;order:2;}.f-copy{align-self:flex-end;}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav aria-label="Primary navigation">
+      <a class="logo" href="index.html" aria-label="BirdLab home"><img src="assets/birdlab-logo.png" alt="BirdLab R&amp;D"></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">Founder</a>
+        <a href="enquiry.html">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <h1 class="notice-heading">Technical Clarifications</h1>
+      <p class="effective-date">By Chapter</p>
+      <p class="notice-intro">The following notes provide technical clarification for selected parts of <em>The Story Behind BirdLab</em> podcast conversation.</p>
+
+      <section class="notice-section">
+        <h2>10. Web analytics</h2>
+        <div class="notice-copy"><p>The reference to the World Wide Web “going public” in 1993 refers specifically to CERN's decision on 30 April 1993 to release the Web software into the public domain. The Web was already in operation before this, including on servers outside CERN.</p></div>
+      </section>
+
+      <section class="notice-section">
+        <h2>16. Networked controllers</h2>
+        <div class="notice-copy"><p>The 0–10 V sensor and actuator examples are illustrative rather than universal. Temperature inputs may, for example, be resistive thermistors or RTDs as well as transmitters producing standard analogue signals such as 0–10 V. Actuator signal types and their relationship to physical valve position also vary.</p></div>
+      </section>
+
+      <section class="notice-section">
+        <h2>24. Building Energy Management Systems (BEMS)</h2>
+        <div class="notice-copy"><p>The discussion of heating and cooling energy being proportional to airflow assumes other relevant variables are held constant. For sensible heating or cooling, thermal power is proportional to mass airflow when specific heat capacity and temperature difference are fixed. The statement refers to the energy required to condition that air, rather than total building energy consumption.</p></div>
+      </section>
+
+      <section class="notice-section">
+        <h2>29. Savings calculation methodology</h2>
+        <div class="notice-copy">
+          <p>The discussion refers to the ASHRAE Guideline 14 calibration criterion commonly expressed as CV(RMSE). The 15% figure refers to the monthly CV(RMSE) criterion, rather than unnormalised root mean squared error. Model calibration may also be assessed using other metrics, including NMBE.</p>
+          <p>During the discussion, the host refers to approximately 4% average model error as “96% accuracy”. This is conversational shorthand rather than a formal statistical definition of accuracy. The figure being reported is approximately 4% average error when backtesting the factual models against actual metered energy consumption.</p>
+        </div>
+      </section>
+
+      <section class="notice-section">
+        <h2>33. 6th startup: special purpose vehicle</h2>
+        <div class="notice-copy"><p>“Informatics” here refers to the application of data structuring, system interrogation, and semantic interpretation techniques to extract actionable knowledge from building automation data. It enables automated reasoning with regard to HVAC systems configuration and performance, forming the foundation for scalable optimisation.</p></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="f-logo">Bir&amp;d Lab · Building Informatics R&amp;D Lab</div>
+      <div class="f-links"><a href="index.html">Home</a><a href="about.html">Founder</a><a href="enquiry.html">Contact</a><a href="privacy.html">Privacy</a><a class="linkedin-link" href="https://www.linkedin.com/in/alex-amies-a12a0485/" target="_blank" rel="noopener noreferrer" aria-label="Alex Amies on LinkedIn"><img src="assets/linkedin-white.png" alt="" aria-hidden="true"></a></div>
+      <div class="f-copy">© 2026 Building Informatics R&amp;D Lab Ltd<br>King’s College London, Strand, London WC2R 2LS</div>
+    </footer>
+  </div>
+</body>
+</html>

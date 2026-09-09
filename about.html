@@ -123,12 +123,16 @@ nav{padding:28px 6vw;border-bottom:0;}
 .founder-hero-summary p{color:#E4ECF7;font-size:13px;line-height:1.8;}
 .founder-heading{font-size:clamp(42px,5vw,68px);line-height:.95;}
 .founder-copy-secondary{padding-top:54px;}
-.podcast-section{background:#fff;color:var(--brand-primary);padding:110px 6vw;position:relative;overflow:hidden;}
+.podcast-section{background:#fff;color:var(--brand-primary);padding:110px 6vw 0;position:relative;overflow:hidden;}
 .podcast-inner{margin:0;max-width:1500px;position:relative;z-index:2;}
-.podcast-intro{display:grid;gap:7vw;grid-template-columns:.72fr 1.28fr;align-items:start;}
+.podcast-intro{display:grid;gap:7vw;grid-template-columns:.72fr 1.28fr;align-items:center;}
 .podcast-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,68px);font-weight:300;letter-spacing:-.02em;line-height:.95;}
 .podcast-title em{color:var(--brand-turquoise);font-style:italic;}
 .podcast-copy{color:var(--brand-primary);font-size:14px;line-height:1.85;margin-top:22px;max-width:480px;}
+.podcast-meta{font-size:12px;line-height:1.9;margin-top:28px;}
+.podcast-meta p+p{margin-top:3px;}
+.podcast-meta strong{font-weight:500;}
+.podcast-meta a{color:var(--brand-primary);text-decoration-thickness:1px;text-underline-offset:4px;}
 .podcast-video{aspect-ratio:16/9;background:#111;border:1px solid rgba(41,44,112,.18);border-radius:8px;box-shadow:0 18px 45px rgba(41,44,112,.12);overflow:hidden;}
 .podcast-video iframe{border:0;display:block;height:100%;width:100%;}
 .podcast-local-fallback{display:none;height:100%;position:relative;width:100%;}
@@ -138,18 +142,18 @@ nav{padding:28px 6vw;border-bottom:0;}
 .podcast-local-link::before{border-bottom:7px solid transparent;border-left:11px solid #e62117;border-top:7px solid transparent;content:'';}
 .podcast-video.is-local iframe{display:none;}
 .podcast-video.is-local .podcast-local-fallback{display:block;}
-.podcast-chapters{border-top:1px solid rgba(41,44,112,.2);margin-top:64px;padding-top:30px;}
-.podcast-chapters h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:22px;}
+.podcast-chapters{background:var(--brand-primary);border-top:0;color:var(--brand-light);margin:64px -6vw 0;padding:54px 6vw 110px;}
+.podcast-chapters h3{color:var(--brand-light);font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:22px;}
 .chapter-list{display:grid;gap:0 5vw;grid-template-columns:1fr 1fr;list-style:none;}
-.chapter-list li{border-top:1px solid rgba(41,44,112,.14);}
-.chapter-link{align-items:baseline;color:var(--brand-primary);display:grid;gap:14px;grid-template-columns:28px 72px 1fr;padding:13px 0;text-decoration:none;transition:color .2s ease;}
-.chapter-link:hover,.chapter-link:focus-visible{color:#147F84;outline:none;}
-.chapter-number{color:#147F84;font-size:9px;letter-spacing:.14em;}
+.chapter-list li{border-top:1px solid rgba(228,236,247,.18);}
+.chapter-link{align-items:baseline;color:var(--brand-light);display:grid;gap:14px;grid-template-columns:28px 72px 1fr;padding:13px 0;text-decoration:none;transition:color .2s ease;}
+.chapter-link:hover,.chapter-link:focus-visible{color:var(--brand-turquoise);outline:none;}
+.chapter-number{color:var(--brand-turquoise);font-size:9px;letter-spacing:.14em;}
 .chapter-link time{font-size:10px;letter-spacing:.08em;white-space:nowrap;}
 .chapter-name{font-family:'Inter',sans-serif;font-size:12px;line-height:1.55;}
 .cta-inner{padding:120px 6vw;}.cta-h{font-size:clamp(48px,6vw,76px);line-height:.94;}.cta-p{font-size:14px;max-width:560px;}footer{padding:34px 6vw;}
 @media(max-width:1100px) and (min-width:821px){.hero-content{grid-template-columns:minmax(260px,.9fr) minmax(360px,1.1fr)}.hero-right{grid-column:1/-1}.founder-hero-summary{margin-left:auto;max-width:560px}}
-@media(max-width:820px){.hero{min-height:auto}nav{padding:20px 22px}.nav-links{gap:14px}.nav-links>a:not([aria-current="page"]){display:none}.hero-content{grid-template-columns:1fr;min-height:auto;padding:42px 22px 84px}.founder-portrait{height:auto;max-height:none;min-height:0}.hero-wireframe-art,.about-bird-art{display:none}.hero-right{display:flex}.founder-hero-summary{max-width:none;width:100%}.h1{font-size:56px}.sect{padding:78px 22px}.two-col{grid-template-columns:1fr;gap:52px}.founder-copy-secondary{padding-top:0}.stats{grid-template-columns:1fr}.stat:not(:last-child){border-right:0;border-bottom:1px solid rgba(228,236,247,.14)}.process-steps{grid-template-columns:1fr 1fr;gap:40px 18px}.p-line{display:none}.cta-inner{padding:84px 22px}footer{align-items:flex-start;flex-direction:column;gap:14px;padding:28px 22px}.f-links{order:2}.f-copy{align-self:flex-end}.podcast-section{padding:78px 22px}.podcast-intro{grid-template-columns:1fr;gap:42px}.podcast-chapters{margin-top:48px}.chapter-list{grid-template-columns:1fr}}
+@media(max-width:820px){.hero{min-height:auto}nav{padding:20px 22px}.nav-links{gap:14px}.nav-links>a:not([aria-current="page"]){display:none}.hero-content{grid-template-columns:1fr;min-height:auto;padding:42px 22px 84px}.founder-portrait{height:auto;max-height:none;min-height:0}.hero-wireframe-art,.about-bird-art{display:none}.hero-right{display:flex}.founder-hero-summary{max-width:none;width:100%}.h1{font-size:56px}.sect{padding:78px 22px}.two-col{grid-template-columns:1fr;gap:52px}.founder-copy-secondary{padding-top:0}.stats{grid-template-columns:1fr}.stat:not(:last-child){border-right:0;border-bottom:1px solid rgba(228,236,247,.14)}.process-steps{grid-template-columns:1fr 1fr;gap:40px 18px}.p-line{display:none}.cta-inner{padding:84px 22px}footer{align-items:flex-start;flex-direction:column;gap:14px;padding:28px 22px}.f-links{order:2}.f-copy{align-self:flex-end}.podcast-section{padding:78px 22px 0}.podcast-intro{grid-template-columns:1fr;gap:42px}.podcast-chapters{margin:48px -22px 0;padding:44px 22px 78px}.chapter-list{grid-template-columns:1fr}}
 @media(max-width:520px){.feat-grid,.process-steps{grid-template-columns:1fr}.feat:nth-child(odd){border-right:0}.feat:nth-child(even){padding-left:0}.btns{align-items:stretch;flex-direction:column}.h1{font-size:48px}.chapter-link{gap:9px;grid-template-columns:24px 68px 1fr}.chapter-name{font-size:11px}}
 </style>
 
@@ -361,6 +365,10 @@ nav{padding:28px 6vw;border-bottom:0;}
       <div>
         <h2 class="podcast-title" id="podcast-title">The story behind<br><em>BirdLab</em></h2>
         <p class="podcast-copy">Alex Amies reflects on the experiences that shaped his career, his route into building performance and the ideas behind BirdLab. Listen to the complete conversation or choose a chapter to begin at a particular part of the story.</p>
+        <div class="podcast-meta">
+          <p><strong>Podcast Recording Date: 8th May 2026</strong></p>
+          <p><a href="technical-clarifications.html">Technical Clarifications (By Chapter)</a></p>
+        </div>
       </div>
       <div class="podcast-video">
         <iframe name="podcast-player" data-src="https://www.youtube-nocookie.com/embed/Ui3ugNaLMn0" title="The story behind BirdLab - podcast with Alex Amies" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
